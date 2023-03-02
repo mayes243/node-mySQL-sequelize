@@ -38,6 +38,8 @@ db.User = require('./userModel.js')(sequelize, DataTypes);
 db.sequelize.sync({ force: false })
     .then(() => {
         console.log('yes re-sync done! ✅')
+    }).catch(err => {
+        console.error('Unable to re-sync table: ❌', err);
     })
 
 module.exports = db;
