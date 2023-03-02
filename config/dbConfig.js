@@ -5,7 +5,7 @@ module.exports = {
     DB: 'node_sequelize_db',
     dialect: 'mysql',
 
-    // CONNECTION LIMITATAION (OPTIONAL)
+    // CONNECTION LIMITATION (OPTIONAL)
     pool: {
         max: 5, // maximum
         min: 0, // minimun
