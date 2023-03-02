@@ -17,7 +17,7 @@ module.exports.addUser = async (req, res) => {
 module.exports.getAllUsers = async (req, res) => {
 
     try {
-        const allUsers = await User.findAll({});
+        const allUsers = await User.findAll({ order: [['id', 'DESC']] });
         res.status(200).json(allUsers);
     } catch (error) {
         console.log(error)
