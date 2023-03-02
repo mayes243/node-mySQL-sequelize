@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     // create a User table
-    const User = sequelize.define("User", {
+    const User = sequelize.define("User", { // User is the table name 
         firstName: {
             type: DataTypes.STRING,
             allowNull: false
