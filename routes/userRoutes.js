@@ -2,8 +2,15 @@ const { addUser, getAllUsers, getSingleUser, updateUser, deleteUser } = require(
 
 const router = require("express").Router();
 
-router.route("/").post(addUser).get(getAllUsers);
+// add new user | get all existing user
+router.route("/")
+    .post(addUser)
+    .get(getAllUsers);
 
-router.route("/:id").get(getSingleUser).patch(updateUser).delete(deleteUser);
+// get user | update user | delete user
+router.route("/:id")
+    .get(getSingleUser)
+    .patch(updateUser)
+    .delete(deleteUser);
 
 module.exports = router;

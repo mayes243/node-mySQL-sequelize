@@ -1,19 +1,17 @@
-const db = require('../models');
-
-// create main Model
-const User = db.User;
+const { User } = require('../models');
 
 // create a new User
 module.exports.addUser = async (req, res) => {
     try {
         const newUser = await User.create(req.body);
-        res.status(200).send(newUser);
+        res.status(200).json(newUser);
 
     } catch (error) {
         console.log(error);
     }
 }
 
+// get all users
 module.exports.getAllUsers = async (req, res) => {
 
     try {
@@ -24,6 +22,7 @@ module.exports.getAllUsers = async (req, res) => {
     }
 }
 
+// get user
 module.exports.getSingleUser = async (req, res) => {
 
     const id = req.params.id;
@@ -38,6 +37,7 @@ module.exports.getSingleUser = async (req, res) => {
     }
 }
 
+// update user
 module.exports.updateUser = async (req, res) => {
 
     const id = req.params.id;
@@ -57,6 +57,7 @@ module.exports.updateUser = async (req, res) => {
     }
 }
 
+// delete user
 module.exports.deleteUser = async (req, res) => {
 
     const id = req.params.id;
