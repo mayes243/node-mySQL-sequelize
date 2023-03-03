@@ -1,0 +1,29 @@
+{
+    "development": {
+        "host": "localhost",
+        "username": "root",
+        "password": "",
+        "database": "node_sequelize_db",
+        "ssl": true,
+        "port": 3306,
+        "dialect": "mysql"
+    },
+    "test": {
+        "host": "localhost",
+        "username": "root",
+        "password": "",
+        "database": "node_sequelize_db_test",
+        "ssl": true,
+        "port": 3306,
+        "dialect": "mysql"
+    },
+    "production": {
+        "host": "localhost",
+        "username": "root",
+        "password": "",
+        "database": "node_sequelize_db_prod",
+        "ssl": true,
+        "port": 3306,
+        "dialect": "mysql"
+    }
+}
