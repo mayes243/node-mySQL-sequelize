@@ -20,12 +20,8 @@ const sequelize = new Sequelize(
 })
 
 sequelize.authenticate()
-    .then(() => {
-        console.log("Mongodb connection SUCCESS ⭐");
-    })
-    .catch(err => {
-        console.log("Mongodb connection FAIL 💥" + err);
-    })
+    .then(() => console.log("Mongodb connection SUCCESS ⭐"))
+    .catch(err => console.log("Mongodb connection FAIL 💥" + err))
 
 const db = {}
 
@@ -36,10 +32,7 @@ db.sequelize = sequelize
 db.User = require('./userModel.js')(sequelize, DataTypes);
 
 db.sequelize.sync({ force: false })
-    .then(() => {
-        console.log('yes re-sync done! ✅')
-    }).catch(err => {
-        console.error('Unable to re-sync table: ❌', err);
-    })
+    .then(() => console.log('yes re-sync done! ✅'))
+    .catch(err => console.error('Unable to re-sync table: ❌', err));
 
-module.exports = db;
+module.exports = db; 
