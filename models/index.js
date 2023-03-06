@@ -1,5 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
+// for PostgreSQL only
+require("pg")
+
 const env = process.env.NODE_ENV || 'development';
 const dbConfig = require('../config/dbconfig.json')[env];
 

@@ -19,11 +19,10 @@
     },
     "production": {
         "host": "localhost",
-        "username": "root",
-        "password": "",
-        "database": "node_sequelize_db_prod",
-        "ssl": true,
-        "port": 3306,
-        "dialect": "mysql"
+        "username": "postgres",
+        "password": "admin",
+        "database": "node_sequelize_db",
+        "port": 5432,
+        "dialect": "postgres"
     }
 }
